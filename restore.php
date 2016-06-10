@@ -36,16 +36,36 @@ p
 	<div id = "top">
 
 	</div>
-	
+
 	<p align="center">清除表格数据</p>
-	
+
 	<br />
 	<br />
 	<br />
-	
+
 	<div id = "reset_table">
-		<form action = "reset.php" method = "post">
-			<input id = "clear_table" type = "submit" name = "clear_table" value = "清空" />
+		<form action = "reset_15.php" method = "post">
+			<input id = "clear_table" type = "submit" name = "clear_table" value = "清空并创建15人匹配" />
+		</form>
+
+		<form action = "reset_20.php" method = "post">
+			<input id = "clear_table" type = "submit" name = "clear_table" value = "清空并创建20人匹配" />
+		</form>
+
+		<form action = "reset_25.php" method = "post">
+			<input id = "clear_table" type = "submit" name = "clear_table" value = "清空并创建25人匹配" />
+		</form>
+
+		<form action = "reset_30.php" method = "post">
+			<input id = "clear_table" type = "submit" name = "clear_table" value = "清空并创建30人匹配" />
+		</form>
+
+		<form action = "reset_40.php" method = "post">
+			<input id = "clear_table" type = "submit" name = "clear_table" value = "清空并创建40人匹配" />
+		</form>
+
+		<form action = "reset_50.php" method = "post">
+			<input id = "clear_table" type = "submit" name = "clear_table" value = "清空并创建50人匹配" />
 		</form>
 	</div>
 

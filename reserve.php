@@ -62,7 +62,7 @@ if (!$con)
   }
 
 mysql_query("SET NAMES 'utf8'");
-  
+
 mysql_select_db("coc_rock", $con);
 
 $time= date('Y-m-d H:i:s',time());
@@ -70,7 +70,7 @@ $time= date('Y-m-d H:i:s',time());
 if($sub_subscriber != '' && $sub_order_no != '')
 {
 	mysql_query("UPDATE rock_reservation SET subscriber = '$sub_subscriber', time = '$time' WHERE order_no = '$sub_order_no'");
-	
+
 	echo "<h1 align='center'>" . "预约成功" . "</h1>";
 }
 else
@@ -84,8 +84,8 @@ mysql_close($con);
 	<div id = "top">
 
 	</div>
-	
-	<div name = "return" style = "text-align: center;">
+
+	<div style = "text-align: center;">
 		<a href="clash.php">返回</a>
 	</div>
 

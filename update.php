@@ -60,16 +60,20 @@ if(!is_numeric($sub_self_stars) || !is_numeric($sub_against_stars) || !is_numeri
 
 
 //执行sql
-$con = mysql_connect("localhost","root","");
+    $mysql_server_name = "localhost"; //数据库服务器名称
+    $mysql_username = "root"; // 连接数据库用户名[默认为root，如果忘记可以通过select * from mysql.user 方式查询]
+    $mysql_password = ""; // 连接数据库密码
+    $mysql_database = "coc_rock"; // 数据库的名字
+    $conn = mysql_connect($mysql_server_name, $mysql_username, $mysql_password);
 
-if (!$con)
-  {
-  die('Could not connect: ' . mysql_error());
-  }
+    if (!$conn)
+      {
+      die('Could not connect: ' . mysql_error());
+      }
 
 mysql_query("SET NAMES 'utf8'");
-  
-mysql_select_db("coc_rock", $con);
+
+mysql_select_db("coc_rock", $conn);
 
 if($sub_self_stars != '')
 {
@@ -98,14 +102,14 @@ if($sub_self_stars == "" and $sub_against_stars == "" and $sub_self_attack_no ==
 	echo "<script>alert('请输入数字！');history.back();</script>";
 }
 
-mysql_close($con);
+mysql_close($conn);
 ?>
 
 	<div id = "top">
 
 	</div>
-	
-	<div name = "return" style = "text-align: center;">
+
+	<div style = "text-align: center;">
 		<a href="clash.php">返回</a>
 	</div>
 
